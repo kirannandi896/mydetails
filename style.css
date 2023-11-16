@@ -1,40 +1,62 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    /* margin: 0;
+    padding: 0; */
+    /* box-sizing: border-box; */
+    /* outline: none;
+    border: none; */
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
 body 
 {
     background: linear-gradient(270deg, #56d8e4 10%, #9f01ea 90%);
+    padding:15px 9%;
+    padding-bottom: 100px;
 }
 header 
 {
-    background: linear-gradient(200deg, #ea0101 10%, rgb(246, 250, 8) 90%);
+    background: linear-gradient(200deg, #00000028 10%, rgba(255, 255, 255, 0.174) 90%);
     border-radius: 15px;  
-    color: #fff;
-    padding:20px;
+    color: rgb(255, 255, 255);
+    padding:10px;
     text-align:center;
+    box-shadow: 0 9px 7px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.258);
 }
 h1 
 {
     margin:0;
+    font-size:1.1cm;
+}
+h3{
+    color:#000000;
+    font-weight: bold;
 }
 .container 
 {
     justify-content: center;
-    margin-top:20px;   
+    margin-top:20px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(301px, 1fr));
+    gap: 15px;  
 }
 .card 
 {
     background-color: #f41111;
     border-radius: 15px 50px;
-    padding: 20px; 
-    width: 50%;
-    height: 50%;
+    padding: 30px 20px; 
+    /* width: 30%;
+    height: 30%; */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     margin-bottom:20px;
-    transition: width 2s, height 2s, box-shadow 2s;
+    transition: .2s linear;
 }
 .card:hover
 {
-    width: 60%;
-    height: 60%;
-    box-shadow: 0 9px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    transform: scale(1.03);
 }
 .card h2 
 {
@@ -57,12 +79,16 @@ h1
     display:flex;
     align-items:center;
     justify-content:center;
-    height:50px;
+    height:90px;
     margin: 0 10px;
     text-decoration:none;
-    width:50px;
+    width:90px;
 }
 .social-media a:hover 
 {
     background-color: #ffffff;
+}
+.icon{
+    width:80%;
+    height:80%;
 }
