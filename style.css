@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 * {
     font-family: 'Poppins', sans-serif;
     /* margin: 0;
@@ -13,7 +14,7 @@ body
 {
     background: linear-gradient(270deg, #56d8e4 10%, #9f01ea 90%);
     padding:15px 9%;
-    padding-bottom: 100px;
+    padding-bottom: 0px;
 }
 header 
 {
@@ -91,4 +92,67 @@ h3{
 .icon{
     width:80%;
     height:80%;
+}
+
+.card2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #ff7b7b6b;
+    border-radius: 15px 50px;
+    padding: 1rem 9%; 
+    /* width:100%; */
+    /* height: 30%; */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom:20px;
+    transition: .2s linear;
+}
+.card2:hover
+{
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    transform: scale(1.03);
+}
+
+.contact{
+    display:inline;
+    margin-top:20px;
+}
+.contact a{
+    border-radius:50%;
+    color: #000000;
+    /* display:flex;
+    align-items:center;
+    justify-content:center; */
+    height:10%;
+    margin: 0 10px;
+    text-decoration:none;
+    width:10%;
+    transition: .2s linear;
+}
+
+.contact a:hover{
+    background-color: white;
+    box-shadow: 0 0 1rem rgb(255, 255, 255);
+    transform: scale(1.00);
+}
+
+.icon2{
+    width:3%;
+    height:3%;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 9%;
+    background: rgb(26, 31, 41);
+    color: aliceblue;
+}
+
+@media (max-width:768px){
+    .container{ 
+        padding:20px;
+    }
 }
