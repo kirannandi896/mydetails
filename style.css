@@ -96,7 +96,7 @@ h3{
 
 .card2{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-color: #ff7b7b6b;
@@ -115,20 +115,20 @@ h3{
 }
 
 .contact{
-    display:inline;
-    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    /* margin-top:20px; */
 }
 .contact a{
     border-radius:50%;
     color: #000000;
-    /* display:flex;
+    display:flex;
     align-items:center;
-    justify-content:center; */
-    height:10%;
+    justify-content:center;
+    height:90px;
     margin: 0 10px;
     text-decoration:none;
-    width:10%;
-    transition: .2s linear;
+    width:90px;
 }
 
 .contact a:hover{
@@ -138,8 +138,8 @@ h3{
 }
 
 .icon2{
-    width:3%;
-    height:3%;
+    width:50%;
+    height:50%;
 }
 .footer{
     display: flex;
