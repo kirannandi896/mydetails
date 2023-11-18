@@ -167,8 +167,25 @@ h3{
     color: aliceblue;
 }
 
-/* @media (max-width:1000px){
-    .content{ 
-        padding:20px;
-    }
-} */
+.uparr a{
+    position:fixed;
+    right:10px; 
+    bottom: 10px; 
+    display:none;
+    border-radius:50%;
+    color: #000000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:60px;
+    margin: 0 10px;
+    text-decoration:none;
+    width:60px;
+    transition: .2s linear;
+}
+
+.uparr a:hover{
+    background-color: rgba(255, 255, 255, 0.642);
+    box-shadow: 0 0 1rem rgb(255, 255, 255);
+    transform: scale(1.00);
+}
