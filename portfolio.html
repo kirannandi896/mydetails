@@ -4,6 +4,27 @@
         <title>
             Kiran Nandi - Portfolio
         </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".form").on('submit',function(e) {
+                    e.preventDefault();
+                    var name=$(".name").val();
+                    var email=$(".email").val();
+                    var phone=$(".phone").val();
+                    var subject=$(".subject").val();
+                    var message=$(".message").val();
+                    $.post("https://script.google.com/macros/s/AKfycbzELYCWpv6jysxaYyilFwLKUgaptO55jflsVRJtfg85tbZbcCI3bPb5YhxrVjh4hD0bHg/exec",{name:name,email:email,phone:phone,subject:subject,message:message},function(res) {
+                        if(res==1){
+                            alert("Submitted Successfully");
+                        }
+                        else{
+                            alert("Error! Try again");
+                        }
+                    })
+                })
+            })
+        </script>
         <meta http-equiv="X-UA-Compatible" content="IE=7">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -12,7 +33,7 @@
     </head>
     <body>
         <header class="header">
-            <a href="#" class="logo">Portfolio</a>
+            <a href="#" class="logo"> My Portfolio</a>
 
             <nav class="nav">
                 <a href="#home" class="active">Home</a>
@@ -40,13 +61,13 @@
                 <!--Download CV-->
             </div>
             <div class="myimg">
-                <img src="myimg.jpg" alt="My Image">
+                <img src="myimg.png" alt="My Image">
             </div>
         </section>
 
         <section class="about" id="about">
             <div class="ab-img" id="ab-img">
-                <img src="myimg2.jpg" alt="My Image">
+                <img src="myimg.png" alt="My Image">
             </div>
 
             <div class="ab-cont">
@@ -65,28 +86,28 @@
                     <img src="python.png" alt="Python Image" class="sk-img">
                     <h3>Python</h3>
                     <p>Quite good at Python programming language</p>
-                    <a href="" class="btn">Certificate</a>
+                    <a href="https://www.linkedin.com/posts/kiran-nandi-76a003288_basics-of-python-programming-for-absolute-activity-7122619457339846656-HCJg?utm_source=share&utm_medium=member_desktop" class="btn">Certificate</a>
                 </div>
 
                 <div class="sk-box">
                     <img src="linux.png" alt="Linux Image" class="sk-img">
                     <h3>Linux Skills</h3>
                     <p>I am also quite comfortable with Linux Terminal.</p>
-                    <a href="" class="btn">Certificate</a>
+                    <a href="https://www.linkedin.com/posts/kiran-nandi-76a003288_kiran-arun-nandi-has-successfully-completed-activity-7127688413574520833-27Hj?utm_source=share&utm_medium=member_desktop" class="btn">Certificate</a>
                 </div>
 
                 <div class="sk-box">
                     <img src="web.png" alt="Web Image" class="sk-img">
                     <h3>Web Development</h3>
                     <p>Having basic knowledge of HTML, CSS and JavaScript.</p>
-                    <a href="" class="btn">Certificate</a>
+                    <a href="https://www.linkedin.com/posts/kiran-nandi-76a003288_sertifier-digitalbadge-digitalcertificate-activity-7097610026835402752-36u9?utm_source=share&utm_medium=member_desktop" class="btn">Certificate</a>
                 </div>
 
                 <div class="sk-box">
                     <img src="android.png" alt="Android Image" class="sk-img">
                     <h3>Android App Development</h3>
                     <p>Very much comfortable with Andriod Studio and aspiring for having future in Android Development and many more.</p>
-                    <a href="" class="btn">Certificate</a>
+                    <a href="https://www.linkedin.com/posts/kiran-nandi-76a003288_1000-free-courses-with-free-certificates-activity-7131700577532604417-coB3?utm_source=share&utm_medium=member_desktop" class="btn">Certificate</a>
                 </div>
             </div>
         </section>
@@ -97,7 +118,7 @@
             <div class="pr-cont">
                 <div class="pr-box">
                     <img src="myport.png.jpg" alt="Portfolio project Image">
-                    <div class="project-layer">
+                    <div class="pr-layer">
                         <h4>Web Portfolio</h4>
                         <p>Created a Web Portfolio using HTML, CSS and JS.</p>
                         <a href="portfolio.html"><img src="go.png" alt="open"></a>          
@@ -108,17 +129,17 @@
         <section class="contact" id="contact">
             <h2 class="heading">Contact <span>Me</span></h2>
       
-            <form action="">
+            <form class="form" method="post">
               <div class="input-box">
-                <input type="text" name="name" id="name" placeholder="Full Name">
-                <input type="email" name="email" id="name" placeholder="Email Address">
+                <input type="text" name="name" class="name" placeholder="Full Name" required>
+                <input type="email" name="email" class="email" placeholder="Email Address" required>
               </div>
               <div class="input-box">
-                <input type="number" placeholder="Phone Number">
-                <input type="text" placeholder="Contact Subject">
+                <input type="number" placeholder="Phone Number" class="phone"  name="phone" required>
+                <input type="text" placeholder="Contact Subject" name="subject" class="subject" required>
               </div>
-              <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-              <input type="submit" value="Send Message" class="btn">
+              <textarea name="message" class="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+              <input type="submit" value="Send Message" name="submit" class="btn">
             </form>
           </section>
 
