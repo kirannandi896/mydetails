@@ -25,26 +25,42 @@
                 })
             })
         </script>
-        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="pstyle.css">
     </head>
-    <body>
+    <body align="center">
         <header class="header">
             <a href="#" class="logo"> My Portfolio</a>
-
-            <nav class="nav">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+            <span style="font-size:30px;cursor:pointer;color:red" onclick="openNav()">&#9776;</span>
+            <nav class="overlay" id="nav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </nav>
         </header>
+        <script>
+            function openNav() {
+              document.getElementById("nav").style.height = "100%";
+            }
+            
+            function closeNav() {
+              document.getElementById("nav").style.height = "0%";
+            }
+        </script>
+
 
         <section class="home" id="home">
+            <div class="myimg">
+                <img src="myimg.png" alt="My Image">
+            </div>
             <div class="h-cont">
                 <h3><span>Hello,</span> It's Me</h3>
                 <h1>Kiran Nandi</h1>
@@ -60,18 +76,16 @@
                 </div>
                 <!--Download CV-->
             </div>
-            <div class="myimg">
-                <img src="myimg.png" alt="My Image">
-            </div>
         </section>
 
         <section class="about" id="about">
-            <div class="ab-img" id="ab-img">
-                <img src="myimg.png" alt="My Image">
-            </div>
-
             <div class="ab-cont">
                 <h2 class="heading">About <span id="ab-me">Me</span></h2>
+                <center>
+                <div class="ab-img" id="ab-img">
+                    <img src="myimg.png" alt="My Image">
+                </div>
+                </center>
                 <h3>Computer Engineer Student</h3>
                 <p>Hey, I am now in First Year at MIT Acaedemy of Engineering. I aspire to become an Android App Developer. I am still learning Kotlin as well as C and Python. Also very much comfortible with the Android Studio.</p>
                 <a href="Mydetails.html" class="btn">Know more</a>

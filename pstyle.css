@@ -13,7 +13,7 @@
     --bgcolor: rgb(255, 252, 252);
     --bgcolor2: rgb(204, 236, 244);
     --textcolor: rgb(0, 0, 0);
-    --dec-color: aqua;
+    --dec-color: rgb(115, 255, 0);
 }
 
 html{
@@ -45,6 +45,10 @@ header{
     box-shadow: 0 0 1rem black;
 }
 
+.header span:hover{
+    background-color: black;
+}
+
 .logo{
     font-size: 2rem;
     color: rgb(255, 0, 68);
@@ -53,54 +57,79 @@ header{
     font-family:Georgia, 'Times New Roman', Times, serif
 }
 
-.nav a {
-    display: inline-block;
-    color: #000000;
-    letter-spacing: 2px;
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
     text-decoration: none;
-    font-size: 1.5rem;
-    overflow: hidden;
-    transition-property: all;
-    transition-duration: 0.25s;
-    margin-left: 0.5rem;
-    padding: 0.2rem 1rem 0rem 1rem;
-    font-family: Teko;
-}
-
-.nav a.active{
-    color: rgb(0, 0, 0);
-}
-
-.nav a:hover {
-    cursor: pointer;
-    color: #ffffff;
-    background: rgb(0, 234, 255);
-    box-shadow: 0 0 30px aqua;
-    border-radius: 400px;
-}
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
 
 .home{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    /* align-items: center; */
 }
 
-.h-cont{
+/* .h-cont{
     margin-right: 135px;
-}
-
-/* .myimg{
-    
 } */
 
+.myimg{
+    position:relative;
+    top:-30px;
+}
+
 .myimg img{
-    width: 36vw;
+    width: 30%;
     background-color: rgb(68, 218, 255);
     border-radius:50%;
     border: solid;
     border-width: 5px;
     border-color: #151515;
-    box-shadow: 0px 0px 50px  #000000;
+    box-shadow: 0px 0px 40px  #000000;
 }
 
 .h-cont h3{
@@ -118,37 +147,37 @@ header{
     font-size: 1.20rem;
 }
 
-.h-cont h3:nth-of-type(2){
+/* .h-cont h3:nth-of-type(2){
     margin-top: 0.7rem;
     margin-bottom: 0.2rem;
-}
+} */
 
 span{
     color: rgb(203, 0, 253);
     font-weight: bold;
 }
 #job{
-    color: aqua;
+    color: rgb(72, 255, 0);
 }
 
 .social a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     background: transparent;
-    border: 0.2rem solid aqua;
+    /* border: 0.2rem solid aqua; */
     border-radius: 50%;
-    font-size: 2.25rem;
+    /* font-size: 2.25rem; */
     color: aqua;
-    margin: 3rem 1.5rem 3rem 0;
+    margin: 2rem 1rem 2rem 0;
 }
 
 .social a:hover{
     background: var(--dec-color);
     color: var(--bgcolor2);
-    box-shadow: 0 0 1.5rem var(--dec-color);
+    box-shadow: 0 0 3rem 1rem var(--dec-color);
 }
 
 img{
@@ -157,7 +186,9 @@ img{
 }
 
 #ab-img{
-    filter: drop-shadow(0px 0px 7px rgb(0, 191, 255));
+    filter: drop-shadow(0px 0px 7px rgb(0, 149, 255));
+    height:40%;
+    width:40%;
 }
 
 .btn{
@@ -176,6 +207,7 @@ img{
 }
 
 .about{
+    /* display: block; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,7 +217,7 @@ img{
 
 .heading{
     text-align: center;
-    font-size: 3.2rem;
+    font-size: 3rem;
 }
 
 .ab-cont h2{
@@ -195,7 +227,7 @@ img{
 
 .ab-cont h3{
     font-size: 2rem;
-    color: aqua;
+    color: rgb(0, 60, 255);
 }
 .ab-cont p{
     font-size: 1.25rem;
@@ -255,8 +287,8 @@ img{
 }
 
 .pr-cont{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
     align-items: center;
     gap: 2.5rem;
 }
@@ -266,7 +298,7 @@ img{
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bgcolor);
     overflow: hidden;
-    display: flex;
+    /* display: flex; */
 }
 
 .pr-box img{
