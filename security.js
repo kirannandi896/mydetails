@@ -1,6 +1,6 @@
 var s=prompt("Password: ");
-const password = process.env.PASS;
-if(s === password){
+const password = env.PASS;
+if(s == password){
     alert("Securely opened");
 }
 else
