@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact me</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="pstyle.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".form").on('submit',function(e) {
+                    e.preventDefault();
+                    var name=$(".name").val();
+                    var email=$(".email").val();
+                    var phone=$(".phone").val();
+                    var subject=$(".subject").val();
+                    var message=$(".message").val();
+                    var prequest="!!!";
+                    $.post("https://script.google.com/macros/s/AKfycbzPYcduedPzeoCP44jn9HQwmYLxpFQ5-1TIrClOJChcqqvr8v5Nmo7A3mN3dkmKw8VL-A/exec",{name:name,email:email,phone:phone,subject:subject,message:message,prequest:prequest},function(res) {
+                        if(res==1){
+                            alert("Submitted Successfully!! Password will be sent on your email soon after verification...");
+                        }
+                        else{
+                            alert("Error! Try again");
+                        }
+                    })
+                })
+            })
+        </script>
+
+    </head>
+    <body>
+        <section class="contact" id="contact">
+            <h2 class="heading">Contact <span>Me</span></h2>
+      
+            <form class="form" method="post">
+              <div class="input-box">
+                <input type="text" name="name" class="name" placeholder="Full Name" required>
+                <input type="email" name="email" class="email" placeholder="Email Address" required>
+              </div>
+              <div class="input-box">
+                <input type="number" placeholder="Phone Number" class="phone"  name="phone" required>
+                <input type="text" value="Portfolio Password Request" name="subject" class="subject" readonly>
+              </div>
+              <textarea name="message" class="message" cols="30" rows="10" placeholder="Your Message(Optional)"></textarea>
+              <input type="submit" value="Send Message" name="submit" class="btn">
+            </form>
+          </section>
+
+          <footer class="footer">
+            <div class="footer-txt">
+                <p>Copyright © 2023 - Kiran Nandi | All Rights Reserved.</p>
+              </div>    
+          </footer>
+    </body>
+</html>

@@ -4,27 +4,8 @@
         <title>
             Kiran Nandi - Portfolio
         </title>
+        <script src="https://github.com/kirannandi896/private-files/blob/main/security.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $(".form").on('submit',function(e) {
-                    e.preventDefault();
-                    var name=$(".name").val();
-                    var email=$(".email").val();
-                    var phone=$(".phone").val();
-                    var subject=$(".subject").val();
-                    var message=$(".message").val();
-                    $.post("https://script.google.com/macros/s/AKfycbzELYCWpv6jysxaYyilFwLKUgaptO55jflsVRJtfg85tbZbcCI3bPb5YhxrVjh4hD0bHg/exec",{name:name,email:email,phone:phone,subject:subject,message:message},function(res) {
-                        if(res==1){
-                            alert("Submitted Successfully");
-                        }
-                        else{
-                            alert("Error! Try again");
-                        }
-                    })
-                })
-            })
-        </script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -155,6 +136,7 @@
               <textarea name="message" class="message" cols="30" rows="10" placeholder="Your Message"></textarea>
               <input type="submit" value="Send Message" name="submit" class="btn">
             </form>
+            <script src="https://github.com/kirannandi896/private-files/blob/main/data.js"></script>
           </section>
 
           <footer class="footer">
