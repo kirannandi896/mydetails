@@ -127,7 +127,7 @@
             <form name="f1" class="form" method="post">
               <div class="input-box">
                 <input type="text" name="name" class="name" placeholder="Full Name" required>
-                <input type="email" name="email" class="email" onblur="emailvalid(document.f1.email)" placeholder="Email Address" required>
+                <input type="email" name="email" class="email" pattern=".+@gmail\.com" placeholder="Email Address" required>
               </div>
               <div class="input-box">
                 <input type="number" placeholder="Phone Number" class="phone"  name="phone" required>
@@ -136,7 +136,7 @@
               <textarea name="message" class="message" cols="30" rows="10" placeholder="Your Message"></textarea>
               <input type="submit" value="Send Message" name="submit" class="btn">
             </form>
-            <script type="text/javascript">
+<!--             <script type="text/javascript">
                 function emailvalid(email)
                 {
                     var pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -151,7 +151,7 @@
                         return false;
                     }
                 }
-            </script>
+            </script> -->
             <script src="data.js"></script>
           </section>
 
