@@ -3,8 +3,12 @@ const dnka="150106";
 if(s == dnka){
     alert("Securely opened");
 }
-else
+else if(s!= dnka)
 {
     alert("Wrong password contact me.")
     window.location="contact.html";
+}
+else
+{
+    window.location="Mydetails.html"
 }
