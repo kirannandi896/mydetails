@@ -124,7 +124,7 @@ header{
 }
 
 .myimg img{
-    width: 40%;
+    width: 60%;
     background-color: rgb(68, 218, 255);
     border-radius:50%;
     border: solid;
@@ -188,8 +188,8 @@ img{
 
 #ab-img{
     filter: drop-shadow(0px 0px 7px rgb(0, 149, 255));
-    height:40%;
-    width:40%;
+    height:50%;
+    width:50%;
 }
 
 .btn{
