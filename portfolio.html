@@ -13,17 +13,18 @@
         <link rel="stylesheet" href="pstyle.css">
     </head>
     <body align="center">
+        <script src="portfolio.js"></script>
         <header class="header">
             <a href="#" class="logo"> My Portfolio</a>
-            <span style="font-size:30px;cursor:pointer;color:red;padding: 10px;border-radius: 49%;" onclick="openNav()">&#9776;</span>
+            <span style="font-size:25px;cursor:pointer;color:red;padding:5px 10px 5px 10px;border-radius: 100%;" class="hider" onclick="openNav()">&#9776;</span>
             <nav class="overlay" id="nav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <div class="overlay-content">
-                    <a href="#home" class="active">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#home" class="active" onclick="active()">Home</a>
+                    <a href="#about" onclick="active()">About</a>
+                    <a href="#skills" onclick="active()">Skills</a>
+                    <a href="#projects" onclick="active()">Projects</a>
+                    <a href="#contact" onclick="active()">Contact</a>
                 </div>
             </nav>
         </header>
