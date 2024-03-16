@@ -138,6 +138,13 @@ a{
         right: 45px;
         font-size: 60px;
       }
+      .overlay-content a {
+        border-radius: 0%;
+      }
+      .active{
+        background-color: #7300ff6d;
+        color: #fffefe;
+      }
       
       @media screen and (max-height: 450px) {
         .overlay {overflow-y: auto;}

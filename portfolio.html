@@ -15,7 +15,7 @@
     <body align="center" onload="active()">
         <script src="portfolio.js"></script>
         <header class="header">
-            <a href="#" class="logo"> My Portfolio</a>
+            <a href="#" class="logo">Portfolio</a>
             <span style="font-size:25px;cursor:pointer;color:#8c00ff;padding:5px 10px 5px 10px;border-radius: 100%;" class="hider" onclick="openNav()">&#9776;</span>
             <nav class="overlay" id="nav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -156,7 +156,8 @@
         <section class="contact" id="contact">
             <h2 class="heading">Contact <span>Me</span></h2>
       
-            <form name="f1" class="form" method="post">
+            <form name="f1" class="form" action="https://formspree.io/f/xoqgnqwp"
+            method="POST">
               <div class="input-box">
                 <input type="text" name="name" class="name" placeholder="Full Name" required>
                 <input type="email" name="email" class="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="Email Address" required>
@@ -168,7 +169,7 @@
               <textarea name="message" class="message" cols="30" rows="10" placeholder="Your Message"></textarea>
               <input type="submit" value="Send Message" name="submit" class="btn">
             </form>
-            <script src="data.js"></script>
+            <!-- <script src="data.js"></script> -->
           </section>
 
           <footer class="footer">
