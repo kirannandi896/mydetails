@@ -55,6 +55,7 @@ header{
     box-shadow: 0 0 1rem black;
 }
 
+
 .logo{
     font-size: 220%;
     color: #9000ff;
@@ -607,13 +608,62 @@ img{
     transform: scale(1.00);
 }
 
-.icon:hover{
+.uppr:hover{
     width: 55%;
     height: 55%;
 }
 
-.icon{
+.uppr{
     width:50%;
     height:50%;
     transition: .2s linear;
+}
+
+
+.icon{
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.3s;
+    width: 30vw;
+    height: 30vw;
+}
+
+
+
+#end img{
+    width: 5vw;
+    height: 5vw;
+    cursor: pointer;
+    transition: 0.3s;
+    filter:invert(100%);
+    border-radius: 30%;
+    background: #000000;
+}
+
+#end a{
+    margin-left: 1.5rem;
+}
+
+#end a:hover{
+    box-shadow: none;
+    background: #ffffff;
+}
+
+#end img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 0.5rem rgb(88, 61, 243);
+}
+
+@media screen and (max-width: 700px){
+    .icon{
+        width: 75vw;
+        height: 75vw;
+    }
+    #end img{
+        width: 10vw;
+        height: 10vw;
+    }
+    #end a{
+        margin-left: auto;
+    }
 }
