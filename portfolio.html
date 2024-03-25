@@ -20,13 +20,29 @@
             <nav class="overlay" id="nav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <div class="overlay-content">
-                    <a href="#home" class="active" onclick="active()">Home</a>
+                    <a id="dev" href="#home" class="active" onclick="active()">Home</a>
                     <a href="#about" onclick="active()">About</a>
                     <a href="#skills" onclick="active()">Skills</a>
                     <a href="#projects" onclick="active()">Projects</a>
                     <a href="#contact" onclick="active()">Contact</a>
+                    <a id="danger" href="#danger-zone" onclick="active()" style="display:none">Insights</a>
                 </div>
             </nav>
+            <script>
+                click = 0;
+                function handleClick() {
+                clickCount++;
+                if (clickCount === 6) {
+                    alert("You are not in developer mode!");
+                    document.getElementById("danger-zone").style.display = "none";
+                    document.getElementById("uparr").style.display = "inline";
+                    document.getElementById("danger").style.display = "none";
+                    clickCount = 0;
+                }
+            }
+
+            document.getElementById("danger").addEventListener("click", handleClick);
+            </script>
         </header>
         <script>
             function openNav() {
@@ -143,12 +159,12 @@
             
             <div class="pr-cont">
                 <div class="pr-box">
-                    <img src="mycalci.png" alt="Portfolio project Image">
+                    <img src="disarelief.png" alt="Portfolio project Image">
                     <div class="pr-layer">
-                        <h4>Calculator</h4>
-                        <p>Created Calculator using HTML, CSS and JS.</p>
-                        <a href="https://kirannandi896.github.io/calculator/"><img src="go.png" alt="open"></a> 
-                    </div>         
+                        <h4>DisaRelief</h4>
+                        <p>Created a Disaster Management website.</p>
+                        <a href="bit.ly/disarelief"><img src="go.png" alt="open"></a> 
+                    </div>          
                 </div>
             </div>
         </section>
@@ -172,7 +188,13 @@
             <!-- <script src="data.js"></script> -->
           </section>
 
-          <footer class="footer">
+          <section class="danger-zone" id="danger-zone" style="display:none">
+            <h2 class="heading">Insights</h2><br><br><br>
+            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-c854d51f-1a81-4064-8a8e-1d4a8f14a1ae" data-elfsight-app-lazy></div>
+          </section>
+
+          <footer class="footer" id="footer">
             <div class="footer-txt">
                 <p>Copyright © 2024 - Kiran Nandi | All Rights Reserved.</p>
               </div>
@@ -181,5 +203,23 @@
                 <a href="#home"><img src="uarrow.png" class="icon" alt="home"></a>
             </div>       
           </footer>
+
+
+          <script>
+            var clickCount = 0;
+            function handleClick() {
+                clickCount++;
+                if (clickCount === 6) {
+                    alert("You are in developer mode!");
+                    document.getElementById("danger-zone").style.display = "block";
+                    document.getElementById("uparr").style.display = "none";
+                    document.getElementById("danger").style.display = "inline";
+                    clickCount = 0;
+                }
+            }
+
+            document.getElementById("uparr").addEventListener("click", handleClick);
+          </script>
+
     </body>
 </html>
